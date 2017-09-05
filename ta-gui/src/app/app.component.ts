@@ -24,7 +24,4 @@ export class AppComponent {
   onmove(): void {
     this.cpfduplicado = false;
   }
-  atualizarAluno(aluno: Aluno): void {
-    this.alunoService.atualizar(aluno);
- }
 }
