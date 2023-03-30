@@ -6,7 +6,7 @@ import { Aluno } from './aluno';
 export class AlunoService {
   alunos: Aluno[] = [];
 
-  criar(aluno: Aluno): Aluno | null{
+  criar(aluno: Aluno): Aluno | null {
     aluno = aluno.clone();
     var result = null;
     if (this.cpfNaoCadastrado(aluno.cpf)) {

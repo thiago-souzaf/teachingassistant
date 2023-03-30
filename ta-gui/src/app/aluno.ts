@@ -1,9 +1,11 @@
 export class Aluno {
-  nome: string = "";
-  cpf: string = "";
-  email: string = "";
-  login_gh: string = "";
-  metas: Map<string,string> | undefined;
+  nome: string = '';
+  cpf: string = '';
+  email: string = '';
+  metas: Map<string, string> = new Map<string, string>([
+    ["requisitos", ""],
+    ["gerDeConfiguracao", ""],
+  ]);
 
   constructor() {
     this.clean();
@@ -13,7 +15,11 @@ export class Aluno {
     this.nome = "";
     this.cpf = "";
     this.email = "";
-    this.metas = new Map<string,string>();
+    this.metas = new Map<string, string>([
+      ["requisitos", ""],
+      ["gerDeConfiguracao", ""],
+    ]);
+
   }
 
   clone(): Aluno {
@@ -27,9 +33,8 @@ export class Aluno {
 
   cloneMetas(): Map<string,string> {
     var metas: Map<string,string> = new Map<string,string>();
-    for (let key in this.metas) {
-      var metasValues = metas.get(key)
-      metasValues = this.metas.get(key);
+    for (var [key, value] of this.metas) {
+      metas.set(key, value);
     }
     return metas;
   }

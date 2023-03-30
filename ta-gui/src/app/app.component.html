@@ -24,10 +24,6 @@
    <td><label>e-mail </label></td>
    <td><input [(ngModel)]="aluno.email" ></td>
 </tr>
-<tr>
-  <td><label>login GitHub </label></td>
-  <td><input [(ngModel)]="aluno.login_gh" ></td>
-</tr>
 </table>
 
 <table class="alunos">
@@ -42,8 +38,8 @@
    <td>{{a.nome}}</td>
    <td>{{a.cpf}}</td>
    <td>{{a.email}}</td>
-   <td><input [(ngModel)]="a.metas['requisitos']" (change)="atualizarAluno(a)"></td>
-   <td><input [(ngModel)]="a.metas['gerDeConfiguracao']" (change)="atualizarAluno(a)"></td>
+   <td><input [(ngModel)]="a.metas.get('requisitos')" (change)="atualizarAluno(a)"></td>
+   <td><input [(ngModel)]="a.metas.get('gerDeConfiguracao')" (change)="atualizarAluno(a)"></td>
 </tr>
 </table>
 
