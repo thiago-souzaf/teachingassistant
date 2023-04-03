@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
- import { NgModule } from '@angular/core';
+  import { NgModule } from '@angular/core';
 
   import { Aluno } from './aluno';
- import { AlunoService } from './aluno.service';
+  import { AlunoService } from './aluno.service';
 
   @Component({
    selector: 'app-root',
@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
     constructor(private alunoService: AlunoService) {}
 
     aluno: Aluno = new Aluno();
-    alunos: Aluno[];
+    alunos: Aluno[] = [];
     cpfduplicado: boolean = false;
 
      criarAluno(a: Aluno): void {
